@@ -1,0 +1,43 @@
+button {
+  float: right;
+  background-color: #44C47D;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+.login-border {
+  border: 1px solid rgb(221, 221, 221);
+}
+.text-middle{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.c2Texto{
+	position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translate(-0%, -50%);
+}
+.c2{
+	border: solid 1px rgb(0, 0, 0);
+  height: 50px;
+}
+.c1{
+	border: solid 1px rgb(0, 0, 0);
+	background-color: rgb(153, 204, 255);
+	font-weight: bold;
+	text-align: center;
+	height: 50px;
+}
+
+.image-product {
+  width: 150px;
+  border-radius: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
