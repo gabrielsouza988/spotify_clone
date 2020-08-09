@@ -1,7 +1,7 @@
-button {
+/* button {
   float: right;
   background-color: #44C47D;
-}
+} */
 .login {
   display: flex;
   justify-content: center;
