@@ -1,5 +1,5 @@
 
-  <div class="wrapper">
+  <div class="wrapper" style="">
     <!-- Sidebar Holder -->
     <nav id="sidebar">
       <div class="logo" style="padding: 10px; margin-top: 10px; margin-left: 10px;">

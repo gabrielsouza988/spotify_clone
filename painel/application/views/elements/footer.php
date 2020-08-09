@@ -13,10 +13,10 @@
     cursor: pointer;
   }
 
-
-  /* #bg {
-    
-  } */
+  #buttons button:target {
+    background: none;
+    border: none;
+  }
 
   #bg img {
     padding-top: 15px;
@@ -46,22 +46,40 @@
 
   }
 
-  /* #fill {
+  #seek-bar {
+    width: 250px;
     height: 5px;
-    background-color: royalblue;
+    background-color: #545353;
+    display: flex;
+    border-radius: 50px;
+    /* float: right;
+    position: relative;
+    top: -20px; */
+    margin-left: 35px;
+    cursor: pointer;
+  }
+
+  #fill {
+    height: 5px;
+    background-color: #B3B3B3;
     border-radius: 20px;
   }
 
   #handle {
     width: 8px;
     height: 8px;
-    background-color: royalblue;
+    background-color: white;
     border-radius: 50%;
     margin-left: -5px;
+    /* transform: scale(2); */
+  }
+
+  #handle:hover {
     transform: scale(2);
-  } */
+  }
+
 </style>
-<div class="col-md-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
+<div class="col-xs-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
 
   <div id="bg">
     <div id="blackLayer"></div>
@@ -76,25 +94,29 @@
     <div id="player">
       <div id="buttons">
         <button id="pre" onclick="pre()"><img src="<?php echo base_url(); ?>assets/img/Pre.png" height="90%" width="90%" /></button>
-        <button id="play" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Pause.png" /></button>
+        <button id="play" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Play.png" /></button>
+        <button id="pause" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Pause.png"/></button>
         <button id="next" onclick="next()"><img src="<?php echo base_url(); ?>assets/img/Next.png" height="90%" width="90%" /></button>
-        
-
       </div>
 
-      <div id="seek-bar">
-        <div id="fill"></div>
-        <div id="handle"></div>
-      </div>
+
     </div>
-  </div>
+        <div id="seek-bar">
+          <div id="fill"></div>
+          <div id="handle"></div>
+        </div>
+
+      </div>
+      <div style="float: right; position: relative; top: -30px;">
+        <input type="range" id="volume" min="0" max="10" value="5" >
+      </div>
   <!-- <div >
-      <audio controls="controls" style="height: 90px; width: 100%;">
+      <audio controls src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3"> 
         <source src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3" type="audio/ogg" />
         <source src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-    </div> -->
+    </div>  -->
 </div>
 
 <script src="<?php echo base_url(); ?>assets/js/tether.js"></script>
@@ -120,6 +142,124 @@
       $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
   });
+
+
+  var audio;
+
+//Hide Pause Initially
+$('#pause').hide();
+	
+//Initializer - Play First Song
+initAudio($('#playlist li:first-child'));
+	
+function initAudio(element){
+	var song = element.attr('song');
+    var title = element.text();
+    var cover = element.attr('cover');
+    var artist = element.attr('artist');
+
+	//Create a New Audio Object
+	audio = new Audio('media/' + song);
+	
+	if(!audio.currentTime){
+		$('#duration').html('0.00');
+	}
+
+	$('#audio-player .title').text(title);
+    $('#audio-player .artist').text(artist);
+	
+	//Insert Cover Image
+	$('img.cover').attr('src','images/covers/' + cover);
+	
+	$('#playlist li').removeClass('active');
+    element.addClass('active');
+}
+
+
+//Play Button
+$('#play').click(function(){
+	audio.play();
+	$('#play').hide();
+	$('#pause').show();
+	$('#duration').fadeIn(400);
+	showDuration();
+});
+
+//Pause Button
+$('#pause').click(function(){
+	audio.pause();
+	$('#pause').hide();
+	$('#play').show();
+});
+	
+//Stop Button
+$('#stop').click(function(){
+	audio.pause();		
+	audio.currentTime = 0;
+	$('#pause').hide();
+	$('#play').show();
+	$('#duration').fadeOut(400);
+});
+
+//Next Button
+$('#next').click(function(){
+    audio.pause();
+    var next = $('#playlist li.active').next();
+    if (next.length == 0) {
+        next = $('#playlist li:first-child');
+    }
+    initAudio(next);
+	audio.play();
+	showDuration();
+});
+
+//Prev Button
+$('#prev').click(function(){
+    audio.pause();
+    var prev = $('#playlist li.active').prev();
+    if (prev.length == 0) {
+        prev = $('#playlist li:last-child');
+    }
+    initAudio(prev);
+	audio.play();
+	showDuration();
+});
+
+//Playlist Song Click
+$('#playlist li').click(function () {
+    audio.pause();
+    initAudio($(this));
+	$('#play').hide();
+	$('#pause').show();
+	$('#duration').fadeIn(400);
+	audio.play();
+	showDuration();
+});
+
+//Volume Control
+$('#volume').change(function(){
+	audio.volume = parseFloat(this.value / 10);
+});
+	
+//Time Duration
+function showDuration(){
+	$(audio).bind('timeupdate', function(){
+		//Get hours and minutes
+		var s = parseInt(audio.currentTime % 60);
+		var m = parseInt((audio.currentTime / 60) % 60);
+		//Add 0 if seconds less than 10
+		if (s < 10) {
+			s = '0' + s;
+		}
+		$('#duration').html(m + '.' + s);	
+		var value = 0;
+		if (audio.currentTime > 0) {
+			value = Math.floor((100 / audio.duration) * audio.currentTime);
+		}
+		$('#progress').css('width',value+'%');
+	});
+}
+
 </script>
 </body>
 
