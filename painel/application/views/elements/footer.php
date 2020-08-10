@@ -78,6 +78,65 @@
     transform: scale(2);
   }
 
+  input[type=range] {
+   -webkit-appearance: none; /*Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  /* color: #4B907D; */
+  border-radius: 45rem;
+  height: 5px;
+  background: #545353; /* Otherwise white in Chrome*/
+  /* background-color: #1DB954; */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  /* -webkit-appearance: none; */
+  /* background-color: #1DB954; */
+}
+
+input[type=range]:focus {
+  /* outline: none; Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  /* background-color: #1DB954; */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+   /* background: transparent; 
+  border-color: transparent;
+  color: transparent; */
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* border: 1px solid #000000; */
+  height: 15px;
+  width: 15px;
+  /* border-radius: 100%; */
+  /* background: #ffffff; */
+  cursor: pointer;
+  /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! */
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  /* -webkit-appearance: none;*/
+  border: 1px solid #000000; 
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  background: #ffffff; 
+   cursor: pointer; 
+  /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! */
+  /* background-color: #1DB954; */
+}
+
+
+
+
 </style>
 <div class="col-xs-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
 
@@ -108,7 +167,13 @@
 
       </div>
       <div style="float: right; position: relative; top: -30px;">
+      <div class="col-md-3" style="float: left; position: relative; right: -30px;">
+        <i class="fa fa-volume-up"></i>
+      </div>
+      <div class="col-md-9" style="position: relative; bottom: 3px;">
         <input type="range" id="volume" min="0" max="10" value="5" >
+
+      </div>
       </div>
   <!-- <div >
       <audio controls src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3"> 
