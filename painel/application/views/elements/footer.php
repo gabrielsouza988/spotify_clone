@@ -111,11 +111,11 @@ input[type=range]::-ms-track {
 /* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  /* border: 1px solid #000000; */
-  height: 15px;
-  width: 15px;
-  /* border-radius: 100%; */
-  /* background: #ffffff; */
+  border: 1px solid #000000;
+  height: 13px;
+  width: 13px;
+  border-radius: 100%;
+  background: #ffffff;
   cursor: pointer;
   /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! */
