@@ -25,8 +25,8 @@
 		<!-- <link rel="shortcut icon" href=<?php echo base_url(); ?>"assets/img/favicon.png" type="image/x-icon"> -->
 		<link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.png" type="image/x-icon">
 
+		<!-- <link rel="stylesheet" href="<?php base_url(); ?>assets/css/style-sidebar.css"> -->
 		<link href="<?php echo base_url(); ?>assets/css/estilo.css" rel="stylesheet">
-		<link rel="stylesheet" href="<?php base_url(); ?>assets/css/style-sidebar.css">
 		<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
 		
 
@@ -35,4 +35,4 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 
 	</head>
-<body style="background-color: #121212; color: white;">
+<body>

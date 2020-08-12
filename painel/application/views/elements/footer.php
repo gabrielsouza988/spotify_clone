@@ -1,10 +1,10 @@
 <!--footer-->
 <style>
-  #player {
+  /* #player {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 10px; */
+    /* margin-top: 10px; 
   }
 
   #buttons button {
@@ -54,7 +54,7 @@
     border-radius: 50px;
     /* float: right;
     position: relative;
-    top: -20px; */
+    top: -20px; 
     margin-left: 35px;
     cursor: pointer;
   }
@@ -71,7 +71,7 @@
     background-color: white;
     border-radius: 50%;
     margin-left: -5px;
-    /* transform: scale(2); */
+    /* transform: scale(2); 
   }
 
   #handle:hover {
@@ -79,23 +79,23 @@
   }
 
   input[type=range] {
-   -webkit-appearance: none; /*Hides the slider so that custom slider can be made */
+   -webkit-appearance: none; /*Hides the slider so that custom slider can be made 
   width: 100%; /* Specific width is required for Firefox. */
-  /* color: #4B907D; */
+  /* color: #4B907D; 
   border-radius: 45rem;
   height: 5px;
   background: #545353; /* Otherwise white in Chrome*/
-  /* background-color: #1DB954; */
+  /* background-color: #1DB954; 
 }
 
 input[type=range]::-webkit-slider-thumb {
   /* -webkit-appearance: none; */
-  /* background-color: #1DB954; */
+  /* background-color: #1DB954; 
 }
 
 input[type=range]:focus {
   /* outline: none; Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-  /* background-color: #1DB954; */
+  /* background-color: #1DB954; 
 }
 
 input[type=range]::-ms-track {
@@ -105,10 +105,10 @@ input[type=range]::-ms-track {
   /* Hides the slider so custom styles can be added */
    /* background: transparent; 
   border-color: transparent;
-  color: transparent; */
+  color: transparent; 
 }
 
-/* Special styling for WebKit/Blink */
+/* Special styling for WebKit/Blink 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
@@ -118,11 +118,11 @@ input[type=range]::-webkit-slider-thumb {
   background: #ffffff;
   cursor: pointer;
   /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! */
+  /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! 
 }
 
 input[type=range]::-webkit-slider-thumb:hover {
-  /* -webkit-appearance: none;*/
+  /* -webkit-appearance: none;
   border: 1px solid #000000; 
   height: 15px;
   width: 15px;
@@ -131,14 +131,14 @@ input[type=range]::-webkit-slider-thumb:hover {
    cursor: pointer; 
   /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! */
-  /* background-color: #1DB954; */
+  /* background-color: #1DB954; 
 }
 
-
+ */
 
 
 </style>
-<div class="col-xs-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
+<!-- <div class="col-xs-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
 
   <div id="bg">
     <div id="blackLayer"></div>
@@ -175,14 +175,14 @@ input[type=range]::-webkit-slider-thumb:hover {
 
       </div>
       </div>
-  <!-- <div >
+   <div >
       <audio controls src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3"> 
         <source src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3" type="audio/ogg" />
         <source src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-    </div>  -->
-</div>
+    </div>  
+</div> -->
 
 <script src="<?php echo base_url(); ?>assets/js/tether.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery-3.1.0.js"></script>

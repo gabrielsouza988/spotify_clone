@@ -1,10 +1,9 @@
-
-  <div class="wrapper" style="">
-    <!-- Sidebar Holder -->
-    <nav id="sidebar">
+<!-- <div class="wrapper"> -->
+<!-- Sidebar Holder -->
+<!-- <nav id="sidebar">
       <div class="logo" style="padding: 10px; margin-top: 10px; margin-left: 10px;">
         <a href="<?php echo base_url(); ?>first/" class="logo-normal">
-          <img src="<?php echo base_url(); ?>assets/img/spotify-logo.png" alt="" width="130">
+          <img src="<?php echo base_url(); ?>assets/img/spotify.svg" alt="" width="130">
         </a>
       </div>
 
@@ -56,7 +55,37 @@
       </ul>
         
       
-    </nav>
+    </nav> -->
 
+<div class="root">
+  <nav class="nav-bar d-flex flex-column">
+    <div class="nav-bar-header d-flex pl-4 pt-4 pb-4">
+      <img class="logo" src="<?php echo base_url(); ?>assets/img/spotify.svg">
+    </div>
+
+    <ul class="navbar-nav">
+
+      <li class="nav-item">
+        <a href="" class="nav-link">
+          <i class="fa fa-home"></i>
+          <small>Início</small>
+        </a>
+      </li>
+
+    </ul>
     
+  </nav>
 
+  <div class="top-bar">
+
+  </div>
+
+  <div class="main">
+
+  </div>
+
+  <div class="player">
+
+  </div>
+
+</div>

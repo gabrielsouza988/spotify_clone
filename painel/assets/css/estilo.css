@@ -2,6 +2,10 @@
   float: right;
   background-color: #44C47D;
 } */
+
+body {
+  background-color: #121212 !important; 
+}
 .login {
   display: flex;
   justify-content: center;
@@ -40,4 +44,55 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+
+
+.root {
+  height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 
+                "navbar main-view main-view-center"
+                "player player player";
+}
+
+.nav-bar {
+  grid-area: navbar;
+  background-color: #040404;
+  width: 230px;
+  flex: 1;
+  min-height: 0;
+}
+
+.top-bar {
+  grid-area: main-view;
+  height: 60px;
+  z-index: 2;
+}
+
+.main {
+  grid-area: main-view-center;
+  flex: 1;
+  height: 100%;
+  min-height: 0;
+  overflow-y: scroll;
+}
+
+.player {
+  grid-area: player;
+  background-color: #282828;
+  height: 90px;
+}
+
+.nav-bar-header .logo {
+  width: 131px;
+  max-height: 40px;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.navbar-nav {
+  margin-top: 20px;
 }

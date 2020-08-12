@@ -2,7 +2,7 @@
     
 <?php $this->load->view('elements/sidebar-lateral'); ?>
 
-<div class="content">
+<!-- <div class="content">
     <div class="row">
         <div class="col-md-12">
             <h4><strong>Tocado recentemente</strong> </h4>
@@ -59,7 +59,7 @@
         </div>
         
     </div>
-</div>
+</div> -->
 
 
 <?php $this->load->view('elements/footer'); ?>

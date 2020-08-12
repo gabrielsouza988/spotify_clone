@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+/* @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 
 body {
@@ -55,14 +55,13 @@ a, a:hover, a:focus {
 
 /* ---------------------------------------------------
     SIDEBAR STYLE
------------------------------------------------------ */
+----------------------------------------------------- 
 #sidebar {
     width: 250px;
     position: fixed;
     top: 0;
     left: 0;
     height: 88vh;
-    /* z-index: 998; */
     background: #040404;
     color: #fff;
     transition: all 0.3s;
@@ -151,7 +150,7 @@ a.article, a.article:hover {
 
 /* ---------------------------------------------------
     CONTENT STYLE
------------------------------------------------------ */
+----------------------------------------------------- 
 #content {
     width: calc(100% - 250px);
     padding: 40px;
@@ -165,4 +164,4 @@ a.article, a.article:hover {
     width: 100%;
 }
 
-
+ */
