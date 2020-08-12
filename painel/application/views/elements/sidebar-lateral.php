@@ -127,7 +127,7 @@
 
         <div class="col-md-3">
           <div class="card">
-            <div>
+            <div class="card-header">
               <img src="<?php echo base_url(); ?>assets/img/perfil.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
@@ -139,7 +139,7 @@
 
         <div class="col-md-3">
           <div class="card">
-            <div>
+            <div class="card-header">
               <img src="<?php echo base_url(); ?>assets/img/perfil.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
@@ -151,7 +151,7 @@
 
         <div class="col-md-3">
           <div class="card">
-            <div>
+            <div class="card-header">
               <img src="<?php echo base_url(); ?>assets/img/perfil.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
@@ -163,7 +163,7 @@
 
         <div class="col-md-3">
           <div class="card">
-            <div>
+            <div class="card-header">
               <img src="<?php echo base_url(); ?>assets/img/perfil.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
