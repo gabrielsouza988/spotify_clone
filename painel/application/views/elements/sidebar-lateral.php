@@ -63,17 +63,50 @@
       <img class="logo" src="<?php echo base_url(); ?>assets/img/spotify.svg">
     </div>
 
-    <ul class="navbar-nav">
+    <ul class="navbar-nav list-unstyled">
+
+      <li class="nav-item active">
+        <a href="" class="nav-link d-flex align-itens-center">
+          <!-- <i class="fa fa-home"></i> -->
+          <img src="<?php echo base_url(); ?>assets/img/svg/inicio.svg" alt="">
+          <span>Início</span>
+        </a>
+      </li><br><br>
 
       <li class="nav-item">
-        <a href="" class="nav-link">
-          <i class="fa fa-home"></i>
-          <small>Início</small>
+        <a href="" class="nav-link d-flex align-itens-center">
+          <img src="<?php echo base_url(); ?>assets/img/svg/search.svg" alt="">
+          <span>Buscar</span>
         </a>
+      </li><br><br>
+      
+      <li class="nav-item">
+        <a href="" class="nav-link d-flex align-itens-center">
+          <img src="<?php echo base_url(); ?>assets/img/svg/biblioteca.svg" alt="">
+          <span>Sua biblioteca</span>
+        </a>
+      </li><br><br>
+
+      <li class="playlists">
+          <h6>PLAYLISTS</h6>
       </li>
+      <li class="nav-item">
+        <a href="" class="nav-link criar-playlist d-flex align-itens-center">
+          <img src="<?php echo base_url(); ?>assets/img/svg/criarPlaylist.svg" alt="">
+          <span>Criar playlist</span>
+        </a>
+      </li><br><br>
+
+      <li class="nav-item">
+        <a href="" class="nav-link criar-playlist d-flex align-itens-center">
+          <img src="<?php echo base_url(); ?>assets/img/svg/criarPlaylist.svg" alt="">
+          <span>Músicas curtidas</span>
+        </a>
+      </li><br><br>
+
 
     </ul>
-    
+
   </nav>
 
   <div class="top-bar">

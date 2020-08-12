@@ -91,8 +91,62 @@ body {
   max-height: 40px;
   margin-left: 24px;
   margin-top: 24px;
+  margin-bottom: 30px;
 }
 
-.navbar-nav {
-  margin-top: 20px;
+.nav-bar .navbar-nav {
+  padding: 0 8px;
+}
+
+.nav-bar .navbar-nav .nav-item a {
+  border-radius: 4px;
+  padding: 0 16px;
+  height: 40px;
+  color: #FFF;
+  opacity: .6;
+  font-weight: 700;
+}
+.nav-bar .navbar-nav .nav-item a:hover {
+  opacity: 1;
+}
+
+
+.nav-bar .navbar-nav .nav-item.active a {
+  background-color: #282828;
+  opacity: 1;
+}
+
+.nav-bar .navbar-nav .nav-item.active {
+  width: 98%;
+}
+
+.nav-bar .navbar-nav .nav-item img {
+  font-size: 22px;
+  margin-right: 16px;
+  margin-top: 10px;
+}
+
+.nav-bar .navbar-nav .nav-item span {
+  margin-top: 10px;
+}
+
+.playlists {
+  padding-top: 25px;
+}
+
+.playlists h6 {
+  padding: 0 16px;
+  color: #cecccc;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.criar-playlist  img {
+  /* border: 1px solid white; */
+  background-color: white;
+  border-radius: 0;
+  padding: 5px 5px;
 }
