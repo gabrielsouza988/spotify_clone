@@ -26,8 +26,8 @@
 		<link rel="icon" href="<?php echo base_url(); ?>assets/img/favicon.png" type="image/x-icon">
 
 		<!-- <link rel="stylesheet" href="<?php base_url(); ?>assets/css/style-sidebar.css"> -->
-		<link href="<?php echo base_url(); ?>assets/css/estilo.css" rel="stylesheet">
 		<link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet">
+		<link href="<?php echo base_url(); ?>assets/css/estilo.css" rel="stylesheet">
 		
 
 		<link href="<?php echo base_url()?>assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
