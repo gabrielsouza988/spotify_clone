@@ -8,6 +8,7 @@
     <div class="col-md-4 login-border">
       <h3 class="azul-padrao text-xs-center pt-3">GoStore</h3>
       <h4 class="azul-padrao text-xs-center">Seja bem vindo</h4>
+      <h1>Ola asdsadasdasdasd</h1>
       <form  action="<?php echo base_url(); ?>login" method="post">
         <div class="row">
           <div class="col-md-12">
@@ -34,9 +35,9 @@
         </div>
         <div class="col-md-12">
           <br>
-          <?php if ($this->session->flashdata('error')): ?>
+          <!-- <?php //if ($this->session->flashdata('error')): ?>
             <p class="alert alert-danger">Usuario ou senha invalidos(as)</p>
-          <?php endif ?>
+          <?php //endif ?> -->
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12">
           <br>
