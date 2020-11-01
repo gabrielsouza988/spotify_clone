@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
   }
 
   #buttons button {
@@ -14,9 +14,8 @@
     cursor: pointer;
   }
 
-  #buttons button:target {
-    background: none;
-    border: none;
+  #buttons button:focus {
+    outline-style: none;
   }
 
   #bg img {
@@ -65,74 +64,74 @@
   }
 
   #handle {
-    width: 8px;
-    height: 8px;
+    opacity: 0.50;
+    width: 5px;
+    height: 5px;
     background-color: white;
     border-radius: 50%;
-    margin-left: -5px;
+    margin-left: 2px;
     transform: scale(2);
   }
 
   #handle:hover {
     transform: scale(2);
+    opacity: 1;
   }
 
   input[type=range] {
     -webkit-appearance: none;
-    /*Hides the slider so that custom slider can be made 
-  width: 100%; /* Specific width is required for Firefox. */
     color: #4B907D;
     border-radius: 45rem;
+    width: 90%;
     height: 5px;
     background: #545353;
-    /* Otherwise white in Chrome*/
-    background-color: #1DB954;
+    background-color: #b3b3b3;
   }
 
   input[type=range]::-webkit-slider-thumb {
-    /* -webkit-appearance: none; */
     background-color: #1DB954;
   }
 
-  input[type=range]:focus {
-    /* outline: none; Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  input[type=range]:hover {
     background-color: #1DB954;
   }
 
   input[type=range]::-ms-track {
     width: 100%;
     cursor: pointer;
-
-    /* Hides the slider so custom styles can be added */
     background: transparent;
     border-color: transparent;
     color: transparent;
   }
 
-  /* Special styling for WebKit/Blink  */
   input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
+    opacity: 0.25;
     border: 1px solid #000000;
     height: 13px;
     width: 13px;
     border-radius: 100%;
     background: #ffffff;
     cursor: pointer;
-    /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic 
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders!  */
   }
 
   input[type=range]::-webkit-slider-thumb:hover {
     -webkit-appearance: none;
+    opacity: 1;
     border: 1px solid #000000;
     height: 15px;
     width: 15px;
     border-radius: 100%;
     background: #ffffff;
     cursor: pointer;
-    /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;  Add cool effects to your sliders! */
-    /* background-color: #1DB954;  */
+  }
+
+  .player_or_pause {
+    font-size: 35px;
+  }
+
+  .size_pre_next {
+    font-size: 15px;
   }
 </style>
 <!-- <div class="col-xs-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
@@ -198,13 +197,23 @@
 
       <div id="player">
         <div id="buttons">
-          <button id="pre" onclick="pre()"><img src="<?php echo base_url(); ?>assets/img/Pre.png" height="90%" width="90%" /></button>
-          <button id="play" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Play.png" /></button>
-          <button id="pause" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Pause.png" /></button>
-          <button id="next" onclick="next()"><img src="<?php echo base_url(); ?>assets/img/Next.png" height="90%" width="90%" /></button>
+
+          <button id="pre" onclick="pre()">
+            <i class="fa fa-step-backward text-white pr-2  size_pre_next"></i>
+          </button>
+
+          <button id="play" onclick="playOrPauseSong()">
+            <i class="fa fa-play-circle text-white player_or_pause"></i>
+          </button>
+
+          <button id="pause" onclick="playOrPauseSong()">
+            <i class="fa fa-pause-circle text-white player_or_pause"></i>
+          </button>
+
+          <button id="next" onclick="next()">
+            <i class="fa fa-step-forward text-white pl-2 size_pre_next"></i>
+          </button>
         </div>
-
-
       </div>
       <div id="seek-bar">
         <div id="fill"></div>
@@ -217,8 +226,7 @@
         <i class="fa fa-volume-up text-white"></i>
       </div>
       <div class="col-md-9" style="position: relative; bottom: 3px;">
-        <input type="range" id="volume" min="0" max="10" value="5">
-
+        <input type="range" id="volume" min="0" max="10" value="8">
       </div>
     </div>
     <div>
