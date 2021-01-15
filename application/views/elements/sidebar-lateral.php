@@ -104,8 +104,14 @@
           <span>Músicas curtidas</span>
         </a>
       </li><br><br>
-
       <div class="border-playlists"></div>
+      <div class="sidebar-seguidas">
+        <ul class="sidebar-ul">
+          <?php foreach($playlists->items as $row): ?>
+            <li class="sidebar-list"><?php echo $row->name; ?></li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
     </ul>
 
   </nav>

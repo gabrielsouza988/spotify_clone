@@ -1,186 +1,5 @@
-<!--footer-->
-<style>
-  #player {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
 
-  #buttons button {
-    background: none;
-    border: none;
-    padding: 20px 0;
-    cursor: pointer;
-  }
-
-  #buttons button:focus {
-    outline-style: none;
-  }
-
-  #bg img {
-    padding-top: 15px;
-    width: 60px;
-    height: 70px;
-
-  }
-
-  #songTitle {
-    display: inline;
-    margin-left: 10px;
-  }
-
-  #songTitle a {
-    color: white;
-    text-transform: capitalize;
-  }
-
-  #main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-
-  }
-
-  #seek-bar {
-    width: 250px;
-    height: 5px;
-    background-color: #545353;
-    display: flex;
-    border-radius: 50px;
-    float: right;
-    position: relative;
-    top: -20px;
-    margin-left: 35px;
-    cursor: pointer;
-  }
-
-  #fill {
-    height: 5px;
-    background-color: #B3B3B3;
-    border-radius: 20px;
-  }
-
-  #handle {
-    opacity: 0.50;
-    width: 5px;
-    height: 5px;
-    background-color: white;
-    border-radius: 50%;
-    margin-left: 2px;
-    transform: scale(2);
-  }
-
-  #handle:hover {
-    transform: scale(2);
-    opacity: 1;
-  }
-
-  input[type=range] {
-    -webkit-appearance: none;
-    color: #4B907D;
-    border-radius: 45rem;
-    width: 90%;
-    height: 5px;
-    background: #545353;
-    background-color: #b3b3b3;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    background-color: #1DB954;
-  }
-
-  input[type=range]:hover {
-    background-color: #1DB954;
-  }
-
-  input[type=range]::-ms-track {
-    width: 100%;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-
-  input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    opacity: 0.25;
-    border: 1px solid #000000;
-    height: 13px;
-    width: 13px;
-    border-radius: 100%;
-    background: #ffffff;
-    cursor: pointer;
-  }
-
-  input[type=range]::-webkit-slider-thumb:hover {
-    -webkit-appearance: none;
-    opacity: 1;
-    border: 1px solid #000000;
-    height: 15px;
-    width: 15px;
-    border-radius: 100%;
-    background: #ffffff;
-    cursor: pointer;
-  }
-
-  .player_or_pause {
-    font-size: 35px;
-  }
-
-  .size_pre_next {
-    font-size: 15px;
-  }
-</style>
-<!-- <div class="col-xs-12" style="overflow: hidden; background-color: #282828; position: fixed; bottom: 0; height: 6em;">
-
-  <div id="bg">
-    <div id="blackLayer"></div>
-    <img src="<?php echo base_url(); ?>assets/img/Poster1.jpg" />
-    <div id="songTitle">
-      <a href="">teste</a>
-    </div>
-  </div>
-
-  <div id="main">
-
-    <div id="player">
-      <div id="buttons">
-        <button id="pre" onclick="pre()"><img src="<?php echo base_url(); ?>assets/img/Pre.png" height="90%" width="90%" /></button>
-        <button id="play" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Play.png" /></button>
-        <button id="pause" onclick="playOrPauseSong()"><img src="<?php echo base_url(); ?>assets/img/Pause.png"/></button>
-        <button id="next" onclick="next()"><img src="<?php echo base_url(); ?>assets/img/Next.png" height="90%" width="90%" /></button>
-      </div>
-
-
-    </div>
-        <div id="seek-bar">
-          <div id="fill"></div>
-          <div id="handle"></div>
-        </div>
-
-      </div>
-      <div style="float: right; position: relative; top: -30px;">
-      <div class="col-md-3" style="float: left; position: relative; right: -30px;">
-        <i class="fa fa-volume-up"></i>
-      </div>
-      <div class="col-md-9" style="position: relative; bottom: 3px;">
-        <input type="range" id="volume" min="0" max="10" value="5" >
-
-      </div>
-      </div>
-   <div >
-      <audio controls src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3"> 
-        <source src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3" type="audio/ogg" />
-        <source src="<?php echo base_url(); ?>assets/music/tribo-da-periferia.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>  
-</div> -->
-
-
+<!-- footer -->
 <div class="player">
   <div class="col-xs-12">
 
@@ -233,31 +52,21 @@
     </div>
   </div>
 </div>
-<script src="<?php echo base_url(); ?>assets/js/tether.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery-3.1.0.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.mask.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/jquery.maskMoney.min.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/gostore.js"></script>
-<!-- jQuery CDN -->
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-<!-- Bootstrap Js CDN -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- jQuery Custom Scroller CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<!-- <script src="<?php echo base_url(); ?>assets/js/tether.js"></script> -->
+<!-- <script src="<?php echo base_url(); ?>assets/js/jquery-3.1.0.js"></script> -->
+<!-- <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script> -->
+<!-- <script src="<?php echo base_url(); ?>assets/js/jquery.mask.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.maskMoney.min.js"></script> -->
+
+<script
+src="https://code.jquery.com/jquery-3.5.1.min.js"
+integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="<?php echo base_url(); ?>assets/js/spotify.js"></script>
 
 <script type="text/javascript">
-  $(document).ready(function() {
-
-
-    $('#sidebarCollapse').on('click', function() {
-      $('#sidebar, #content').toggleClass('active');
-      $('.collapse.in').toggleClass('in');
-      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-    });
-  });
-
-
   var audio;
 
   //Hide Pause Initially
@@ -373,6 +182,7 @@
       $('#progress').css('width', value + '%');
     });
   }
+  
 </script>
 </body>
 
