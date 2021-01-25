@@ -5,10 +5,32 @@
 
     <div id="bg">
       <div id="blackLayer"></div>
-      <img src="<?php echo base_url(); ?>assets/img/Poster1.jpg" />
-      <div id="songTitle">
-        <a href="">teste</a>
-      </div>
+      <div class="row">
+        <div class="col-md-1">
+            <?php foreach($currently_playing->item->album->images as $row): ?>
+              <?php if($row->height == 640): ?>
+                <img src="<?php echo $row->url; ?>" />
+              <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+        <div class="col-md-6" id="currently_playing">
+          <div class="songTitle">
+            <?php //foreach($currently_playing->item->album as $row): ?>
+              <span>
+                <a href=""><?php echo $currently_playing->item->name; ?></a>
+              </span>
+            <?php //endforeach; ?>
+          </div>
+          <br>
+          <div id="artist_player" >
+            <?php $last_key = count($currently_playing->item->artists); ?>
+            <?php foreach($currently_playing->item->artists as $key => $row): ?>
+              <a href=""><?php echo $row->name; ?></a><?php echo ($key != $last_key && $last_key != 1)?', ' : ''; ?> 
+            <?php endforeach; ?>
+          </div>
+          </div>
+        </div>
+    <!-- </div> -->
     </div>
 
     <div id="main">
@@ -40,7 +62,7 @@
       </div>
 
     </div>
-    <div style="float: right; position: relative; top: -30px;">
+    <div id="div_volume" style="float: right; position: relative; top: -30px;">
       <div class="col-md-3" style="float: left; position: relative; right: -30px;">
         <i class="fa fa-volume-up text-white"></i>
       </div>

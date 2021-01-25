@@ -23,10 +23,19 @@ class First extends CI_Controller {
 	public function index()
 	{
 		$data['playlists'] = $this->token_model->curl('https://api.spotify.com/v1/me/playlists', $_SESSION['token']);
+
+		$data['recent'] = $this->token_model->curl('https://api.spotify.com/v1/me/player/recently-played?limit=4', $_SESSION['token']);
 	
 		$data['new_releases'] = $this->token_model->curl('https://api.spotify.com/v1/browse/new-releases', $_SESSION['token']);
+
+		$data['tops_tracks_user'] = $this->token_model->curl('https://api.spotify.com/v1/me/player/recently-played?Limit=4', $_SESSION['token']);
+		$data['currently_playing'] = $this->token_model->curl('https://api.spotify.com/v1/me/player/currently-playing', $_SESSION['token']);
 		
-		// var_dump($data['playlists']);
+		// var_dump($data['currently_playing']->item->name); NOME DA MUSICA
+		// var_dump($data['currently_playing']->item->artists); NOME DOS ARTISTAS
+		// var_dump($data['currently_playing']->item->album->images); IMAGENS DA MUSICA
+		// var_dump($data['currently_playing']->item->album->external_urls->spotify); LINK DA MUSICA
+		// die;
 
 		$this->load->view('first/first', $data);
 	}

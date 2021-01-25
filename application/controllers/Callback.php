@@ -26,8 +26,9 @@ class Callback extends CI_Controller {
 
 		if (isset($_GET['code'])) {
 				$session->requestAccessToken($_GET['code']);
+				// $_SESSION['token'] = $api->setAccessToken($session->getAccessToken());
 
-				session_start();
+				// session_start();
 				$_SESSION['token'] = $session->getAccessToken();
 
 				redirect(base_url().'first');
@@ -36,11 +37,34 @@ class Callback extends CI_Controller {
 				'scope' => [
 				'playlist-read-private',
 				'user-read-private',
-				'user-read-recently-played'
+				'user-read-recently-played',
+				'user-read-currently-playing',
+				'user-read-playback-position',
+				'user-read-email',
+				'user-read-currently-playing',
+				'user-read-currently-playing',
 						],
 				];
 
 				header('Location: ' . $session->getAuthorizeUrl($scopes));
 		}
+
+
+	// 	if (isset($_GET['code'])) {
+	// 		$session->requestAccessToken($_GET['code']);
+	// 		$api->setAccessToken($session->getAccessToken());
+	
+	// 		print_r($api->me());
+	// } else {
+	// 		$options = [
+	// 				'scope' => [
+	// 						'user-read-email',
+	// 				],
+	// 		];
+	
+	// 		header('Location: ' . $session->getAuthorizeUrl($options));
+	// 		die();
+	// }
+	
 	}
 }
