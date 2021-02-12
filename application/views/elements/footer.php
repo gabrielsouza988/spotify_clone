@@ -2,9 +2,11 @@
 <!-- footer -->
 <div class="player">
   <div class="col-xs-12">
-
+    
+    
     <div id="bg">
       <div id="blackLayer"></div>
+      <?php if(!empty($currently_playing->item)): ?>
       <div class="row">
         <div class="col-md-1">
             <?php foreach($currently_playing->item->album->images as $row): ?>
@@ -30,9 +32,25 @@
           </div>
           </div>
         </div>
-    <!-- </div> -->
+      <?php else: ?>
+      <div class="row">
+        <div class="col-md-1">
+           <img src="" />
+        </div>
+        <div class="col-md-6" id="currently_playing">
+          <div class="songTitle">
+              <span>
+                <a href=""></a>
+              </span>
+          </div>
+          <br>
+          <div id="artist_player" >
+              <a href=""></a> 
+          </div>
+          </div>
+        </div>
+    <?php endif; ?>
     </div>
-
     <div id="main">
 
 

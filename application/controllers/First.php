@@ -30,6 +30,7 @@ class First extends CI_Controller {
 
 		$data['tops_tracks_user'] = $this->token_model->curl('https://api.spotify.com/v1/me/player/recently-played?Limit=4', $_SESSION['token']);
 		$data['currently_playing'] = $this->token_model->curl('https://api.spotify.com/v1/me/player/currently-playing', $_SESSION['token']);
+
 		
 		// var_dump($data['currently_playing']->item->name); NOME DA MUSICA
 		// var_dump($data['currently_playing']->item->artists); NOME DOS ARTISTAS

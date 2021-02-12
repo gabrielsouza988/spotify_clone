@@ -42,7 +42,8 @@ class Callback extends CI_Controller {
 				'user-read-playback-position',
 				'user-read-email',
 				'user-read-currently-playing',
-				'user-read-currently-playing',
+				'user-read-playback-state',
+				'playlist-read-collaborative',
 						],
 				];
 
